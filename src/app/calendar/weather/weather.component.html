@@ -1,0 +1,18 @@
+<div>
+  <p *ngIf="weather.length == 0">Searching...</p>
+  <div *ngIf="weather.length > 0">
+      <table style="width: 100%; text-align: center">
+          <thead></thead>
+          <tbody>
+              <tr>
+                  <td *ngFor="let forecast of weather| slice:0:1;">
+                      <img [src]="forecast.iconLink" />
+                      <p>{{ forecast.highTemperature }}°C</p>
+                      <p>{{ forecast.utcTime | moment }}</p>
+                      <p>{{ forecast.description }}</p>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

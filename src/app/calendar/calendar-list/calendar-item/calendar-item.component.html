@@ -1,0 +1,32 @@
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">
+    <div class="row">
+    <div class="col-xs-2">
+        <p><font size="6"><b>{{ meeting.timeHours }}:{{ meeting.timeSecond}}</b></font></p>
+    </div>
+    <div class="col-md-10">
+      <div class="list-group list-group-flush" >
+        <div class="list-group-item clearfix">
+          <b>{{meeting.name}}</b>
+          <button type="button" class="btn btn-danger btn-xs pull-right" (click)="onDeleteMeeting()">-</button> 
+        </div>
+        <div class="list-group-item">
+            <i class="fa fa-location-arrow" aria-hidden="true"></i>
+            {{meeting.location}}
+        </div>
+      </div>
+      </div>
+    </div>
+  </li>
+  <div class="alert alert-secondary" role="alert">
+      {{ meeting.description }} 
+  </div>
+</ul>
+
+<style>
+ .btn-xs {
+    padding: 3px 5px;
+    font-size: 10px;
+    border-radius: 3px;
+}
+</style>

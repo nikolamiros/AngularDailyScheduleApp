@@ -1,0 +1,5 @@
+<h3>SCHEDULE</h3>
+<p *ngIf="countMeetings>2; else infoText">It's going to be busy that today. You have <b>{{ countMeetings }} events</b> today.</p>
+<ng-template #infoText>
+    <p>There are not too many meetings today. You have only <b>{{ countMeetings }} events</b>.</p>
+  </ng-template>
